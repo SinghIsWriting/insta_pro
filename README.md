@@ -5,15 +5,6 @@
 
 This is the best repo for searching any instagram profile information. insta_pro is a simple Python script that uses the Instaloader module to fetch and display the public profile information of an Instagram user. By running the main.py file, you can easily access basic details about any public Instagram profile.
 
-## Table of Contents
-
-* [Requirements](#Requirements)
-* [Features](#Features)
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Contributing](#Contributing)
-* [License](#License)
-
 ## Requirements
 Before running the script, make sure you have the following installed:
 
