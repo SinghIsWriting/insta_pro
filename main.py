@@ -4,6 +4,7 @@ import lzma
 from instaloader import Instaloader
 from colorama import Fore, init
 import pyshorteners
+from credentials import username, password
 
 init(autoreset=True)
 s=pyshorteners.Shortener()
@@ -14,6 +15,8 @@ path = (os.getcwd()).replace("\\","/")+"/output/"+dp
 dic = {}
 
 ig = Instaloader(quiet=True, dirname_pattern=path+"/", download_geotags=True)
+ig.login(username, password)
+
 print("Fetching Profile Info...")
 ig.download_profile(dp, profile_pic_only=True)
 print(f"{Fore.GREEN}Profile fetched successfully !!!\n")
