@@ -12,7 +12,7 @@ Before running the script, make sure you have the following installed:
 * Instaloader Python module
 
 ## Prerequisites
-* First of all you have to add your instagram credentials in `credentials.py` file.
+* First of all you have to add your Instagram credentials (username and password) in `credentials.py` file.
 
 ## Features
 * Fetch and display the following details of an Instagram user:
@@ -49,7 +49,7 @@ pip3 install -r requirements.txt
 ```
 
 ## Usage
-1. Run the main.py script:
+1. Run the `main.py` script:
 ```
 python3 main.py
 ```

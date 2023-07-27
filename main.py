@@ -5,6 +5,7 @@ from instaloader import Instaloader
 from colorama import Fore, init
 import pyshorteners
 from credentials import username, password
+import sys
 
 init(autoreset=True)
 s=pyshorteners.Shortener()
@@ -15,7 +16,11 @@ path = (os.getcwd()).replace("\\","/")+"/output/"+dp
 dic = {}
 
 ig = Instaloader(quiet=True, dirname_pattern=path+"/", download_geotags=True)
-ig.login(username, password)
+try:
+    ig.login(username, password)
+except:
+    print(f"{Fore.RED}WARNING: Failed to login! Check your credentials.\n")
+    sys.exit()
 
 print("Fetching Profile Info...")
 ig.download_profile(dp, profile_pic_only=True)
