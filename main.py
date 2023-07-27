@@ -17,9 +17,10 @@ dic = {}
 
 ig = Instaloader(quiet=True, dirname_pattern=path+"/", download_geotags=True)
 try:
+    print("Signing in...")
     ig.login(username, password)
 except:
-    print(f"{Fore.RED}WARNING: Failed to login! Check your credentials.\n")
+    print(f"{Fore.RED}WARNING: Signin failed! Please check your credentials.\n")
     sys.exit()
 
 print("Fetching Profile Info...")
