@@ -11,6 +11,9 @@ Before running the script, make sure you have the following installed:
 * Python 3.x
 * Instaloader Python module
 
+## Prerequisites
+* First of all you have to add your instagram credentials in `credentials.py` file.
+
 ## Features
 * Fetch and display the following details of an Instagram user:
   * Id
