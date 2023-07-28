@@ -1,14 +1,15 @@
 import json
 import os
 import lzma
-from instaloader import Instaloader
+from instaloader import Instaloader, exceptions
 from colorama import Fore, init
-import pyshorteners
+from pyshorteners import Shortener
 from credentials import username, password
 import sys
+from requests import get
 
 init(autoreset=True)
-s=pyshorteners.Shortener()
+s = Shortener()
 
 print(f"{Fore.CYAN}\n:::::::::::::::::::::::::::::::::::::",f"{Fore.GREEN}Welocome to INSTApro",f"{Fore.CYAN}:::::::::::::::::::::::::::::::::::::\n")
 dp = input("Enter username : ")
@@ -19,13 +20,23 @@ ig = Instaloader(quiet=True, dirname_pattern=path+"/", download_geotags=True)
 try:
     print("Signing in...")
     ig.login(username, password)
-except:
-    print(f"{Fore.RED}WARNING: Signin failed! Please check your credentials.\n")
+    print("Fetching Profile Info...")
+    ig.download_profile(dp, profile_pic_only=True)
+    print(f"{Fore.GREEN}Profile fetched successfully !!!\n")
+except exceptions.ConnectionException:
+    req = ""
+    try:
+        req = str(get("https://www.google.com/"))
+    except:
+        pass
+    if req == "<Response [200]>":
+        print(f"{Fore.YELLOW}WARNING: Signin failed! Please make sure you have added your correct credentials in credentials.py file.\n")
+    else:
+        print(f"{Fore.RED}\nERROR: Opps, connection failed!\n")
     sys.exit()
-
-print("Fetching Profile Info...")
-ig.download_profile(dp, profile_pic_only=True)
-print(f"{Fore.GREEN}Profile fetched successfully !!!\n")
+except (exceptions.QueryReturnedNotFoundException, exceptions.ProfileNotExistsException):
+    print(f"{Fore.YELLOW}\nWARNING: Opps, this profile does not found!\n")
+    sys.exit()
 
 for f in os.listdir(path):
         if f.endswith('.xz'):
