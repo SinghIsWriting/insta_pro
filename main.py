@@ -76,6 +76,7 @@ for f in os.listdir(path):
         profile_pic = f
         break
 
-print(f"{Fore.GREEN}Profile picture of {dp} is saved at output/{dp}\n", f"output/{dp}/"+profile_pic+"\n")
+crd = (os.getcwd()).split('\\')[-1]
+print(f"{Fore.GREEN}Profile picture of {dp} is saved at", f"{crd}/output/{dp}/"+profile_pic+"\n")
 
 
