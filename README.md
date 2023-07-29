@@ -1,7 +1,9 @@
 # Insta-Pro - Instagram Profile Info Viewer
 
-![insta-pro-1-Screenshot 2023-07-29 194351](https://github.com/SinghIsWriting/insta_pro/assets/122283853/196d2f87-ee02-456c-a467-c4d30824ff50)
-
+<p align="center">
+<img width="70%" height="70%" src="https://github.com/SinghIsWriting/insta_pro/assets/122283853/196d2f87-ee02-456c-a467-c4d30824ff50"/>
+</a>
+</p>
 
 This is the best repo for searching any instagram profile information. insta_pro is a simple Python script that uses the Instaloader module to fetch and display the public profile information of an Instagram user. By running the main.py file, you can easily access basic details about any public Instagram profile.
 
