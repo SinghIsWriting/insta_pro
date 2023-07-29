@@ -23,7 +23,7 @@ try:
     print("Fetching Profile Info...")
     ig.download_profile(dp, profile_pic_only=True)
     print(f"{Fore.GREEN}Profile fetched successfully !!!\n")
-except exceptions.ConnectionException:
+except (exceptions.ConnectionException, exceptions.BadCredentialsException):
     req = ""
     try:
         req = str(get("https://www.google.com/"))
@@ -77,6 +77,6 @@ for f in os.listdir(path):
         break
 
 crd = (os.getcwd()).split('\\')[-1]
-print(f"{Fore.GREEN}Profile picture of {dp} is saved at", f"{crd}/output/{dp}/"+profile_pic+"\n")
+print("[*]",f"{Fore.GREEN}Profile picture of {dp} is saved at", f"{crd}/output/{dp}/"+profile_pic+"\n")
 
 
