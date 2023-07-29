@@ -1,4 +1,4 @@
-# Insta-Pro - Instagram Profile Info Viewer
+# Insta Pro - Instagram Profile Info Viewer
 
 <p align="center">
 <img width="70%" height="70%" src="https://github.com/SinghIsWriting/insta_pro/assets/122283853/196d2f87-ee02-456c-a467-c4d30824ff50"/>
