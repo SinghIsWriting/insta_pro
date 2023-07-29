@@ -70,3 +70,12 @@ print(f"{Fore.CYAN} Business Phone Number :", dic["node"]["business_phone_number
 print(f"{Fore.CYAN}      Business Address :", dic["node"]["business_address_json"])
 print(f"{Fore.CYAN}Business Category Name :", dic["node"]["business_category_name"], "\n")
 
+profile_pic = ""
+for f in os.listdir(path):
+    if f.endswith('.jpg') or f.endswith('.png'):
+        profile_pic = f
+        break
+
+print(f"{Fore.GREEN}Profile picture of {dp} is saved at output/{dp}\n", f"output/{dp}/"+profile_pic+"\n")
+
+
