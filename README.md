@@ -70,4 +70,4 @@ Contributions to this repository are welcome. If you find any bugs or want to ad
 7. Create a pull request detailing your changes.
 
 ## License
-This project is licensed under the MIT License. Feel free to use and modify the code as per your needs.
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code as per your needs.
